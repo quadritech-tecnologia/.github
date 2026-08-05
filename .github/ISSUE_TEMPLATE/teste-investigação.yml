@@ -11,14 +11,14 @@ body:
       value: |
         ## Teste ou Investigação
 
-        Utilize este formulário quando for necessário investigar um comportamento, validar uma regra de negócio ou confirmar a existência de um problema antes de iniciar uma correção ou nova funcionalidade.
+        Utilize este formulário quando for necessário investigar um comportamento, validar uma regra de negócio ou confirmar a existência de um problema antes de iniciar uma correção, melhoria ou nova funcionalidade.
 
   - type: textarea
     id: objetivo
     attributes:
-      label: Objetivo da análise
-      description: O que precisa ser investigado?
-      placeholder: Ex.: Verificar se o reconhecimento facial falha quando a iluminação é baixa.
+      label: Objetivo da investigação
+      description: Descreva claramente o que deverá ser investigado.
+      placeholder: "Exemplo: verificar se o reconhecimento facial falha quando a iluminação é baixa."
     validations:
       required: true
 
@@ -26,7 +26,7 @@ body:
     id: comportamento_esperado
     attributes:
       label: Comportamento esperado
-      description: Como deveria funcionar?
+      description: Descreva como o sistema deveria funcionar.
     validations:
       required: true
 
@@ -35,6 +35,14 @@ body:
     attributes:
       label: Hipóteses
       description: Informe possíveis causas ou pontos que deverão ser investigados.
+      placeholder: |
+        Exemplos:
+        - Regra de negócio incorreta.
+        - Erro de integração.
+        - Configuração inadequada.
+        - Problema de ambiente.
+    validations:
+      required: false
 
   - type: textarea
     id: roteiro
@@ -48,6 +56,21 @@ body:
     validations:
       required: true
 
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências disponíveis
+      description: Informe quais evidências serão anexadas.
+      placeholder: |
+        Exemplos:
+        - Prints
+        - Vídeos
+        - Logs
+        - Arquivos
+        - Documentação
+    validations:
+      required: false
+
   - type: markdown
     attributes:
       value: |
@@ -60,3 +83,5 @@ body:
     attributes:
       label: Observações
       description: Inclua informações complementares, quando necessário.
+    validations:
+      required: false
