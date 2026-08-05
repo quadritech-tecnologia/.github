@@ -18,7 +18,7 @@ body:
     attributes:
       label: Objetivo
       description: Descreva claramente o objetivo da integração.
-      placeholder: Ex.: Integrar o sistema com a API da SENATRAN para consulta de CNH.
+      placeholder: "Exemplo: integrar o sistema com a API da SENATRAN para consulta de CNH."
     validations:
       required: true
 
@@ -29,10 +29,10 @@ body:
       description: Informe por que essa integração é necessária.
       placeholder: |
         Exemplos:
-        • Solicitação do cliente.
-        • Exigência legal.
-        • Automatização de processo.
-        • Eliminação de retrabalho.
+        - Solicitação do cliente.
+        - Exigência legal.
+        - Automatização de processo.
+        - Eliminação de retrabalho.
     validations:
       required: true
 
@@ -49,7 +49,7 @@ body:
     attributes:
       label: Sistema de origem
       description: Informe qual sistema enviará os dados.
-      placeholder: Ex.: QDrive, ABIS, SENATRAN, SERPRO.
+      placeholder: "Exemplo: QDrive, ABIS, SENATRAN ou SERPRO."
     validations:
       required: true
 
@@ -68,7 +68,10 @@ body:
       description: Descreva detalhadamente como deverá ocorrer a integração.
       placeholder: |
         Exemplo:
-        Sistema A → API → Sistema B → Processamento → Retorno.
+        1. O sistema de origem envia a requisição.
+        2. A API valida os dados.
+        3. O sistema de destino processa a solicitação.
+        4. O retorno é enviado ao sistema de origem.
     validations:
       required: true
 
@@ -91,30 +94,35 @@ body:
       description: Informe como será realizada a autenticação.
       placeholder: |
         Exemplos:
-        • Token JWT
-        • OAuth2
-        • Certificado Digital
-        • API Key
-        • Basic Authentication
-        • Não se aplica
+        - Token JWT
+        - OAuth2
+        - Certificado digital
+        - API Key
+        - Basic Authentication
+        - Não se aplica
+    validations:
+      required: false
 
   - type: textarea
     id: contratos
     attributes:
-      label: Contratos / Documentação
+      label: Contratos e documentação
       description: Informe links, Swagger, documentação técnica ou contratos da API.
+    validations:
+      required: false
 
   - type: textarea
     id: criterios
     attributes:
       label: Critérios de aceite
+      description: Informe como será validado que a integração foi concluída corretamente.
       value: |
-        - [ ] Comunicação realizada com sucesso.
-        - [ ] Tratamento de erros implementado.
-        - [ ] Logs implementados.
-        - [ ] Testes realizados.
-        - [ ] Documentação atualizada.
-        - [ ] Integração disponível para validação.
+        - [ ] A comunicação foi realizada com sucesso.
+        - [ ] O tratamento de erros foi implementado.
+        - [ ] Os logs foram implementados.
+        - [ ] Os testes foram realizados.
+        - [ ] A documentação foi atualizada.
+        - [ ] A integração está disponível para validação.
     validations:
       required: true
 
@@ -123,30 +131,37 @@ body:
     attributes:
       label: Dependências
       description: Informe dependências técnicas, fornecedores, certificados, acessos ou decisões necessárias.
+      placeholder: 'Caso não existam dependências, informe "Não se aplica".'
+    validations:
+      required: false
 
   - type: textarea
     id: evidencias
     attributes:
       label: Evidências
-      description: Informe quais evidências deverão ser anexadas.
+      description: Informe quais evidências deverão ser apresentadas.
       placeholder: |
         Exemplos:
-        • Print da integração.
-        • Logs.
-        • JSON de requisição.
-        • JSON de resposta.
-        • Swagger.
-        • Evidências dos testes.
+        - Print da integração.
+        - Logs.
+        - JSON de requisição.
+        - JSON de resposta.
+        - Swagger.
+        - Evidências dos testes.
+    validations:
+      required: false
 
   - type: markdown
     attributes:
       value: |
         ### Anexos
 
-        Após criar a Issue, anexe documentos, Swagger, contratos, JSONs, prints, vídeos ou demais arquivos necessários para o desenvolvimento.
+        Após criar a Issue, anexe documentos, Swagger, contratos, JSONs, prints, vídeos ou outros arquivos necessários.
 
   - type: textarea
     id: observacoes
     attributes:
       label: Observações
       description: Inclua informações complementares, quando necessário.
+    validations:
+      required: false
