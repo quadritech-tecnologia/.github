@@ -1,0 +1,120 @@
+name: Melhoria
+description: Solicitar a evolução ou otimização de uma funcionalidade existente.
+title: "[Melhoria] "
+labels:
+  - melhoria
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Melhoria
+
+        Utilize este formulário para registrar melhorias em funcionalidades já existentes.
+
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Descreva claramente qual melhoria deverá ser implementada.
+      placeholder: Ex.: Melhorar o desempenho da pesquisa de condutores.
+    validations:
+      required: true
+
+  - type: textarea
+    id: funcionalidade_atual
+    attributes:
+      label: Funcionalidade atual
+      description: Descreva como a funcionalidade funciona atualmente.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivacao
+    attributes:
+      label: Motivação
+      description: Informe por que essa melhoria é necessária.
+      placeholder: |
+        Exemplos:
+        • Melhorar a usabilidade.
+        • Reduzir tempo de processamento.
+        • Eliminar retrabalho.
+        • Melhorar a experiência do usuário.
+        • Atender solicitação do cliente.
+    validations:
+      required: true
+
+  - type: textarea
+    id: necessidade
+    attributes:
+      label: Necessidade atendida
+      description: Informe qual necessidade do cliente, negócio ou produto será atendida.
+      placeholder: |
+        Exemplos:
+        • Redução do tempo de atendimento.
+        • Simplificação do processo.
+        • Melhor navegação.
+        • Aumento da produtividade.
+    validations:
+      required: true
+
+  - type: textarea
+    id: melhoria_proposta
+    attributes:
+      label: Melhoria proposta
+      description: Descreva detalhadamente a melhoria esperada.
+    validations:
+      required: true
+
+  - type: textarea
+    id: requisitos
+    attributes:
+      label: Requisitos
+      description: Liste todos os requisitos da melhoria.
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceite
+      description: Informe como será validado que a melhoria foi implementada corretamente.
+      value: |
+        - [ ] A melhoria atende ao objetivo proposto.
+        - [ ] Todos os requisitos foram atendidos.
+        - [ ] Os testes foram realizados.
+        - [ ] Não houve impacto negativo nas funcionalidades existentes.
+        - [ ] A documentação foi atualizada, quando necessário.
+        - [ ] A melhoria está disponível para validação.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencias
+    attributes:
+      label: Dependências
+      description: Informe outras atividades, APIs, equipamentos, fornecedores ou decisões necessárias.
+      placeholder: Caso não existam dependências, informe "Não se aplica".
+
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências esperadas
+      description: Informe quais evidências deverão ser anexadas.
+      value: |
+        • Prints
+        • Vídeos
+        • Logs
+        • Resultado dos testes
+        • Documentação técnica
+
+  - type: textarea
+    id: observacoes
+    attributes:
+      label: Observações
+      description: Inclua informações complementares, quando necessário.
