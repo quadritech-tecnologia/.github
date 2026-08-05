@@ -1,0 +1,62 @@
+name: Teste ou Investigação
+description: Registrar uma investigação para validar um comportamento, identificar um problema ou esclarecer uma regra de negócio antes do desenvolvimento.
+title: "[Teste ou Investigação] "
+labels:
+  - análise
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Teste ou Investigação
+
+        Utilize este formulário quando for necessário investigar um comportamento, validar uma regra de negócio ou confirmar a existência de um problema antes de iniciar uma correção ou nova funcionalidade.
+
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo da análise
+      description: O que precisa ser investigado?
+      placeholder: Ex.: Verificar se o reconhecimento facial falha quando a iluminação é baixa.
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamento_esperado
+    attributes:
+      label: Comportamento esperado
+      description: Como deveria funcionar?
+    validations:
+      required: true
+
+  - type: textarea
+    id: hipoteses
+    attributes:
+      label: Hipóteses
+      description: Informe possíveis causas ou pontos que deverão ser investigados.
+
+  - type: textarea
+    id: roteiro
+    attributes:
+      label: Itens para validação
+      description: Liste os pontos que deverão ser analisados.
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Anexos
+
+        Após criar a Issue, anexe as evidências diretamente na Issue ou em um comentário.
+
+  - type: textarea
+    id: observacoes
+    attributes:
+      label: Observações
+      description: Inclua informações complementares, quando necessário.
