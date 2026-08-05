@@ -18,7 +18,7 @@ body:
     attributes:
       label: Problema
       description: Descreva claramente o defeito encontrado.
-      placeholder: Ex.: Ao salvar o cadastro o sistema apresenta erro 500.
+      placeholder: "Ex.: Ao salvar o cadastro, o sistema apresenta erro 500."
     validations:
       required: true
 
@@ -47,7 +47,7 @@ body:
         1. Acessar...
         2. Informar...
         3. Clicar...
-        4. O erro ocorre...
+        4. Verificar que o erro ocorre...
     validations:
       required: true
 
@@ -55,23 +55,29 @@ body:
     id: ambiente
     attributes:
       label: Ambiente
+      description: Informe em qual ambiente o problema foi identificado.
       options:
         - Desenvolvimento
         - Homologação
         - Produção
+        - Mais de um ambiente
     validations:
       required: true
 
   - type: textarea
     id: causa
     attributes:
-      label: Causa identificada (opcional)
+      label: Causa identificada
       description: Caso conhecida, informe a causa do problema.
+      placeholder: Caso ainda não tenha sido identificada, informe "Não identificada".
+    validations:
+      required: false
 
   - type: textarea
     id: requisitos
     attributes:
       label: Requisitos da correção
+      description: Liste o que deverá ser atendido na correção.
       value: |
         - [ ]
         - [ ]
@@ -83,6 +89,7 @@ body:
     id: criterios
     attributes:
       label: Critérios de aceite
+      description: Informe como será validado que o problema foi corrigido.
       value: |
         - [ ] O defeito foi corrigido.
         - [ ] O problema não pode mais ser reproduzido.
@@ -98,8 +105,25 @@ body:
       label: Dependências
       description: Informe dependências técnicas, atividades ou decisões necessárias.
       placeholder: Caso não existam dependências, informe "Não se aplica".
-      
- - type: markdown
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências disponíveis
+      description: Informe quais evidências do problema estão disponíveis.
+      placeholder: |
+        Exemplos:
+        - Prints
+        - Vídeos
+        - Logs
+        - Mensagem de erro
+        - Arquivos utilizados no teste
+    validations:
+      required: false
+
+  - type: markdown
     attributes:
       value: |
         ### Anexos
@@ -115,18 +139,23 @@ body:
         - arquivos de teste.
 
   - type: textarea
-    id: evidencias
+    id: evidencias_teste
     attributes:
-      label: Evidências esperadas dos teste
+      label: Evidências esperadas dos testes
+      description: Informe quais evidências deverão ser apresentadas após a correção.
       value: |
-        • Prints
-        • Vídeos
-        • Logs
-        • Resultado dos testes
-        • Evidência da correção
+        - Prints
+        - Vídeos
+        - Logs
+        - Resultado dos testes
+        - Evidência da correção
+    validations:
+      required: false
 
   - type: textarea
     id: observacoes
     attributes:
       label: Observações
       description: Inclua informações complementares, quando necessário.
+    validations:
+      required: false
