@@ -18,7 +18,7 @@ body:
     attributes:
       label: Objetivo
       description: Descreva claramente qual melhoria deverá ser implementada.
-      placeholder: Ex.: Melhorar o desempenho da pesquisa de condutores.
+      placeholder: "Exemplo: melhorar o desempenho da pesquisa de condutores."
     validations:
       required: true
 
@@ -37,11 +37,11 @@ body:
       description: Informe por que essa melhoria é necessária.
       placeholder: |
         Exemplos:
-        • Melhorar a usabilidade.
-        • Reduzir tempo de processamento.
-        • Eliminar retrabalho.
-        • Melhorar a experiência do usuário.
-        • Atender solicitação do cliente.
+        - Melhorar a usabilidade.
+        - Reduzir o tempo de processamento.
+        - Eliminar retrabalho.
+        - Melhorar a experiência do usuário.
+        - Atender a uma solicitação do cliente.
     validations:
       required: true
 
@@ -49,13 +49,13 @@ body:
     id: necessidade
     attributes:
       label: Necessidade atendida
-      description: Informe qual necessidade do cliente, negócio ou produto será atendida.
+      description: Informe qual necessidade do cliente, do negócio ou do produto será atendida.
       placeholder: |
         Exemplos:
-        • Redução do tempo de atendimento.
-        • Simplificação do processo.
-        • Melhor navegação.
-        • Aumento da produtividade.
+        - Redução do tempo de atendimento.
+        - Simplificação do processo.
+        - Melhor navegação.
+        - Aumento da produtividade.
     validations:
       required: true
 
@@ -99,22 +99,37 @@ body:
     attributes:
       label: Dependências
       description: Informe outras atividades, APIs, equipamentos, fornecedores ou decisões necessárias.
-      placeholder: Caso não existam dependências, informe "Não se aplica".
+      placeholder: 'Caso não existam dependências, informe "Não se aplica".'
+    validations:
+      required: false
 
   - type: textarea
     id: evidencias
     attributes:
       label: Evidências esperadas
-      description: Informe quais evidências deverão ser anexadas.
+      description: Informe quais evidências deverão ser apresentadas após a implementação.
       value: |
-        • Prints
-        • Vídeos
-        • Logs
-        • Resultado dos testes
-        • Documentação técnica
+        - Prints
+        - Vídeos
+        - Logs
+        - Resultado dos testes
+        - Documentação técnica
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Anexos
+
+        Após criar a Issue, anexe os arquivos necessários na descrição ou em um comentário.
+
+        Você pode anexar imagens, vídeos, logs, documentos e arquivos de teste.
 
   - type: textarea
     id: observacoes
     attributes:
       label: Observações
       description: Inclua informações complementares, quando necessário.
+    validations:
+      required: false
