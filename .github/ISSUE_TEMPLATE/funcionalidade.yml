@@ -18,7 +18,7 @@ body:
     attributes:
       label: Objetivo
       description: Descreva claramente o que deverá ser desenvolvido.
-      placeholder: Ex.: Permitir a emissão de relatório em PDF.
+      placeholder: "Ex.: Permitir a emissão de relatório em PDF."
     validations:
       required: true
 
@@ -29,11 +29,11 @@ body:
       description: Informe por que essa funcionalidade é necessária.
       placeholder: |
         Exemplos:
-        • Solicitação do cliente.
-        • Adequação legal ou normativa.
-        • Evolução do produto.
-        • Necessidade operacional.
-        • Melhoria de processo.
+        - Solicitação do cliente.
+        - Adequação legal ou normativa.
+        - Evolução do produto.
+        - Necessidade operacional.
+        - Melhoria de processo.
     validations:
       required: true
 
@@ -44,11 +44,11 @@ body:
       description: Descreva qual problema ou necessidade será resolvido com esta funcionalidade.
       placeholder: |
         Exemplos:
-        • Atender à Resolução CONTRAN nº XXXX.
-        • Automatizar um processo manual.
-        • Reduzir o tempo de atendimento.
-        • Melhorar a experiência do usuário.
-        • Disponibilizar uma nova funcionalidade ao cliente.
+        - Atender à Resolução CONTRAN nº XXXX.
+        - Automatizar um processo manual.
+        - Reduzir o tempo de atendimento.
+        - Melhorar a experiência do usuário.
+        - Disponibilizar uma nova funcionalidade ao cliente.
     validations:
       required: true
 
@@ -68,11 +68,11 @@ body:
       description: Descreva como deverá funcionar a funcionalidade do início ao fim.
       placeholder: |
         Exemplo:
-        Usuário acessa a tela →
-        Preenche os dados →
-        Sistema valida →
-        Sistema processa →
-        Resultado é apresentado.
+        1. Usuário acessa a tela.
+        2. Preenche os dados.
+        3. O sistema valida as informações.
+        4. O sistema realiza o processamento.
+        5. O resultado é apresentado.
     validations:
       required: true
 
@@ -93,7 +93,9 @@ body:
     attributes:
       label: Restrições
       description: Informe limitações, regras legais, dependências técnicas ou qualquer restrição conhecida.
-      placeholder: Caso não existam, informe "Não se aplica".
+      placeholder: 'Caso não existam, informe "Não se aplica".'
+    validations:
+      required: false
 
   - type: textarea
     id: criterios
@@ -115,22 +117,37 @@ body:
     attributes:
       label: Dependências
       description: Informe outras atividades, APIs, equipamentos, fornecedores ou decisões necessárias.
-      placeholder: Caso não existam dependências, informe "Não se aplica".
+      placeholder: 'Caso não existam dependências, informe "Não se aplica".'
+    validations:
+      required: false
 
   - type: textarea
     id: evidencias
     attributes:
       label: Evidências esperadas
-      description: Informe quais evidências deverão ser anexadas para validação.
+      description: Informe quais evidências deverão ser apresentadas após o desenvolvimento.
       value: |
-        • Prints
-        • Vídeos
-        • Logs
-        • Resultado dos testes
-        • Documentação técnica
+        - Prints
+        - Vídeos
+        - Logs
+        - Resultado dos testes
+        - Documentação técnica
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Anexos
+
+        Após criar a Issue, anexe os arquivos necessários na descrição ou em um comentário.
+
+        Você pode arrastar e soltar imagens, vídeos, logs, documentos e arquivos de teste.
 
   - type: textarea
     id: observacoes
     attributes:
       label: Observações
       description: Inclua qualquer informação complementar importante.
+    validations:
+      required: false
