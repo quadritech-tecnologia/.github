@@ -1,0 +1,113 @@
+name: Débito Técnico
+description: Registrar uma necessidade de ajuste técnico, refatoração ou melhoria interna da aplicação.
+title: "[Débito Técnico] "
+labels:
+  - "débito técnico"
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Utilize este formulário para registrar atividades técnicas que não representam uma nova funcionalidade para o usuário.
+
+  - type: textarea
+    id: problema-tecnico
+    attributes:
+      label: Problema técnico
+      description: Descreva a situação técnica atual e o problema que precisa ser corrigido.
+      placeholder: |
+        Exemplo:
+        Atualmente o sistema não possui um mecanismo de auditoria implementado na camada da aplicação.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivacao
+    attributes:
+      label: Motivação
+      description: Explique por que esse débito técnico precisa ser tratado.
+      placeholder: |
+        Exemplos:
+        - dificuldade de manutenção;
+        - risco de falhas;
+        - dependência desatualizada;
+        - ausência de rastreabilidade;
+        - impacto no desempenho;
+        - limitação para futuras evoluções.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solucao-proposta
+    attributes:
+      label: Solução proposta
+      description: Descreva o que deverá ser implementado para solucionar o problema.
+      placeholder: Descreva a solução técnica esperada.
+    validations:
+      required: true
+
+  - type: textarea
+    id: impacto
+    attributes:
+      label: Impacto esperado
+      description: Informe os possíveis impactos da alteração no sistema, nos usuários ou na infraestrutura.
+      placeholder: |
+        Exemplo:
+        A alteração não deverá gerar impacto funcional para os usuários nem causar lentidão no sistema.
+    validations:
+      required: true
+
+  - type: textarea
+    id: requisitos
+    attributes:
+      label: Requisitos técnicos
+      description: Liste os requisitos que deverão ser atendidos.
+      placeholder: |
+        - [ ] Requisito 1
+        - [ ] Requisito 2
+        - [ ] Requisito 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios-aceite
+    attributes:
+      label: Critérios de aceite
+      description: Informe como será validado que o débito técnico foi resolvido.
+      value: |
+        - [ ] A solução técnica foi implementada.
+        - [ ] O código foi revisado.
+        - [ ] Os testes foram executados.
+        - [ ] Não foram identificados impactos negativos nas funcionalidades existentes.
+        - [ ] A documentação foi atualizada, quando necessário.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencias
+    attributes:
+      label: Dependências
+      description: Informe outras atividades, sistemas, APIs, fornecedores, licenças ou decisões necessárias.
+      placeholder: Caso não existam dependências, informe "Não se aplica".
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências esperadas
+      description: Informe quais evidências deverão ser anexadas para validação.
+      placeholder: |
+        Exemplos:
+        - prints;
+        - vídeos;
+        - logs;
+        - resultado dos testes;
+        - documentação técnica.
+
+  - type: textarea
+    id: observacoes
+    attributes:
+      label: Observações
+      description: Inclua informações complementares, quando necessário.
