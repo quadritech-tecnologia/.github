@@ -1,0 +1,152 @@
+name: Integração
+description: Registrar o desenvolvimento ou alteração de uma integração entre sistemas, APIs, equipamentos ou serviços.
+title: "[Integração] "
+labels:
+  - integração
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Integração
+
+        Utilize este formulário para registrar integrações com sistemas internos, APIs, equipamentos ou serviços de terceiros.
+
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Descreva claramente o objetivo da integração.
+      placeholder: Ex.: Integrar o sistema com a API da SENATRAN para consulta de CNH.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivacao
+    attributes:
+      label: Motivação
+      description: Informe por que essa integração é necessária.
+      placeholder: |
+        Exemplos:
+        • Solicitação do cliente.
+        • Exigência legal.
+        • Automatização de processo.
+        • Eliminação de retrabalho.
+    validations:
+      required: true
+
+  - type: textarea
+    id: necessidade
+    attributes:
+      label: Necessidade atendida
+      description: Informe qual necessidade será atendida com esta integração.
+    validations:
+      required: true
+
+  - type: textarea
+    id: origem
+    attributes:
+      label: Sistema de origem
+      description: Informe qual sistema enviará os dados.
+      placeholder: Ex.: QDrive, ABIS, SENATRAN, SERPRO.
+    validations:
+      required: true
+
+  - type: textarea
+    id: destino
+    attributes:
+      label: Sistema de destino
+      description: Informe qual sistema receberá os dados.
+    validations:
+      required: true
+
+  - type: textarea
+    id: fluxo
+    attributes:
+      label: Fluxo da integração
+      description: Descreva detalhadamente como deverá ocorrer a integração.
+      placeholder: |
+        Exemplo:
+        Sistema A → API → Sistema B → Processamento → Retorno.
+    validations:
+      required: true
+
+  - type: textarea
+    id: requisitos
+    attributes:
+      label: Requisitos
+      description: Liste todos os requisitos da integração.
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: autenticacao
+    attributes:
+      label: Autenticação
+      description: Informe como será realizada a autenticação.
+      placeholder: |
+        Exemplos:
+        • Token JWT
+        • OAuth2
+        • Certificado Digital
+        • API Key
+        • Basic Authentication
+        • Não se aplica
+
+  - type: textarea
+    id: contratos
+    attributes:
+      label: Contratos / Documentação
+      description: Informe links, Swagger, documentação técnica ou contratos da API.
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceite
+      value: |
+        - [ ] Comunicação realizada com sucesso.
+        - [ ] Tratamento de erros implementado.
+        - [ ] Logs implementados.
+        - [ ] Testes realizados.
+        - [ ] Documentação atualizada.
+        - [ ] Integração disponível para validação.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencias
+    attributes:
+      label: Dependências
+      description: Informe dependências técnicas, fornecedores, certificados, acessos ou decisões necessárias.
+
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências
+      description: Informe quais evidências deverão ser anexadas.
+      placeholder: |
+        Exemplos:
+        • Print da integração.
+        • Logs.
+        • JSON de requisição.
+        • JSON de resposta.
+        • Swagger.
+        • Evidências dos testes.
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Anexos
+
+        Após criar a Issue, anexe documentos, Swagger, contratos, JSONs, prints, vídeos ou demais arquivos necessários para o desenvolvimento.
+
+  - type: textarea
+    id: observacoes
+    attributes:
+      label: Observações
+      description: Inclua informações complementares, quando necessário.
