@@ -1,0 +1,54 @@
+name: Documentação
+description: Registrar a criação ou atualização de documentação técnica, funcional ou operacional.
+title: "[Documentação] "
+labels:
+  - documentação
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Documentação
+
+        Utilize este formulário para registrar a criação ou atualização de documentação.
+
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Descreva o objetivo da documentação.
+    validations:
+      required: true
+
+  - type: textarea
+    id: documento
+    attributes:
+      label: Documento afetado
+      description: Informe qual documento deverá ser criado ou atualizado.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alteracoes
+    attributes:
+      label: Alterações
+      description: Descreva o conteúdo que deverá ser documentado.
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceite
+      value: |
+        - [ ] Documento criado ou atualizado.
+        - [ ] Conteúdo revisado.
+        - [ ] Disponível para consulta.
+    validations:
+      required: true
+
+  - type: textarea
+    id: observacoes
+    attributes:
+      label: Observações
