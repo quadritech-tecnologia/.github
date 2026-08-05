@@ -1,0 +1,132 @@
+name: BUG
+description: Registrar a correção de um defeito identificado na aplicação.
+title: "[BUG] "
+labels:
+  - bug
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Correção de Bug
+
+        Utilize este formulário para registrar defeitos ou comportamentos incorretos da aplicação.
+
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema
+      description: Descreva claramente o defeito encontrado.
+      placeholder: Ex.: Ao salvar o cadastro o sistema apresenta erro 500.
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamento_atual
+    attributes:
+      label: Comportamento atual
+      description: Descreva o comportamento atual do sistema.
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamento_esperado
+    attributes:
+      label: Comportamento esperado
+      description: Descreva como o sistema deveria funcionar.
+    validations:
+      required: true
+
+  - type: textarea
+    id: passos
+    attributes:
+      label: Passos para reproduzir
+      description: Informe o passo a passo para reproduzir o problema.
+      placeholder: |
+        1. Acessar...
+        2. Informar...
+        3. Clicar...
+        4. O erro ocorre...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ambiente
+    attributes:
+      label: Ambiente
+      options:
+        - Desenvolvimento
+        - Homologação
+        - Produção
+    validations:
+      required: true
+
+  - type: textarea
+    id: causa
+    attributes:
+      label: Causa identificada (opcional)
+      description: Caso conhecida, informe a causa do problema.
+
+  - type: textarea
+    id: requisitos
+    attributes:
+      label: Requisitos da correção
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceite
+      value: |
+        - [ ] O defeito foi corrigido.
+        - [ ] O problema não pode mais ser reproduzido.
+        - [ ] Os testes foram executados.
+        - [ ] Não foram identificados impactos em outras funcionalidades.
+        - [ ] A correção está disponível para validação.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencias
+    attributes:
+      label: Dependências
+      description: Informe dependências técnicas, atividades ou decisões necessárias.
+      placeholder: Caso não existam dependências, informe "Não se aplica".
+      
+ - type: markdown
+    attributes:
+      value: |
+        ### Anexos
+
+        Após criar a Issue, anexe os arquivos necessários na descrição ou em um comentário.
+
+        Você pode arrastar e soltar:
+
+        - imagens;
+        - vídeos;
+        - logs;
+        - documentos;
+        - arquivos de teste.
+
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências esperadas dos teste
+      value: |
+        • Prints
+        • Vídeos
+        • Logs
+        • Resultado dos testes
+        • Evidência da correção
+
+  - type: textarea
+    id: observacoes
+    attributes:
+      label: Observações
+      description: Inclua informações complementares, quando necessário.
