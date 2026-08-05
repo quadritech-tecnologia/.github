@@ -1,0 +1,136 @@
+name: Funcionalidade
+description: Solicitar o desenvolvimento de uma nova funcionalidade.
+title: "[Funcionalidade] "
+labels:
+  - funcionalidade
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Nova Funcionalidade
+
+        Utilize este formulário para descrever uma nova funcionalidade do sistema.
+
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Descreva claramente o que deverá ser desenvolvido.
+      placeholder: Ex.: Permitir a emissão de relatório em PDF.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivacao
+    attributes:
+      label: Motivação
+      description: Informe por que essa funcionalidade é necessária.
+      placeholder: |
+        Exemplos:
+        • Solicitação do cliente.
+        • Adequação legal ou normativa.
+        • Evolução do produto.
+        • Necessidade operacional.
+        • Melhoria de processo.
+    validations:
+      required: true
+
+  - type: textarea
+    id: necessidade
+    attributes:
+      label: Necessidade atendida
+      description: Descreva qual problema ou necessidade será resolvido com esta funcionalidade.
+      placeholder: |
+        Exemplos:
+        • Atender à Resolução CONTRAN nº XXXX.
+        • Automatizar um processo manual.
+        • Reduzir o tempo de atendimento.
+        • Melhorar a experiência do usuário.
+        • Disponibilizar uma nova funcionalidade ao cliente.
+    validations:
+      required: true
+
+  - type: textarea
+    id: regra_negocio
+    attributes:
+      label: Regra de negócio
+      description: Descreva todas as regras e comportamentos esperados.
+      placeholder: Descreva detalhadamente as regras de negócio.
+    validations:
+      required: true
+
+  - type: textarea
+    id: fluxo
+    attributes:
+      label: Fluxo esperado
+      description: Descreva como deverá funcionar a funcionalidade do início ao fim.
+      placeholder: |
+        Exemplo:
+        Usuário acessa a tela →
+        Preenche os dados →
+        Sistema valida →
+        Sistema processa →
+        Resultado é apresentado.
+    validations:
+      required: true
+
+  - type: textarea
+    id: requisitos
+    attributes:
+      label: Requisitos
+      description: Liste todos os requisitos da funcionalidade.
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: restricoes
+    attributes:
+      label: Restrições
+      description: Informe limitações, regras legais, dependências técnicas ou qualquer restrição conhecida.
+      placeholder: Caso não existam, informe "Não se aplica".
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceite
+      description: Informe como será validado que a funcionalidade foi concluída corretamente.
+      value: |
+        - [ ] A implementação atende à regra de negócio.
+        - [ ] Todos os requisitos foram atendidos.
+        - [ ] Os cenários previstos foram testados.
+        - [ ] Não foram identificados impactos negativos em funcionalidades existentes.
+        - [ ] A documentação foi atualizada, quando necessário.
+        - [ ] A funcionalidade está disponível para validação.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencias
+    attributes:
+      label: Dependências
+      description: Informe outras atividades, APIs, equipamentos, fornecedores ou decisões necessárias.
+      placeholder: Caso não existam dependências, informe "Não se aplica".
+
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências esperadas
+      description: Informe quais evidências deverão ser anexadas para validação.
+      value: |
+        • Prints
+        • Vídeos
+        • Logs
+        • Resultado dos testes
+        • Documentação técnica
+
+  - type: textarea
+    id: observacoes
+    attributes:
+      label: Observações
+      description: Inclua qualquer informação complementar importante.
